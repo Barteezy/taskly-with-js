@@ -13,4 +13,25 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+
+
+$(document).ready(function(){
+   $(".table-row").on('click','button', function(){
+//       $(this).hide();
+//       $(this).closest('.table-row').find('.button-show').toggleClass();
+       $(this).closest('.table-row').find('.task-hidden').slideToggle();
+   });
+});
 //= require_tree .
+//
+//$(document).ready(function(){
+//
+//
+//    var button = $('.toggleModal');
+//    var modal = $('#modal');
+//
+//    button.on('click', function() {
+//        modal.toggleClass('active');
+//    });
+//
+//});

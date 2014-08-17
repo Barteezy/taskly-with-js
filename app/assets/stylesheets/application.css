@@ -1,15 +1,157 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
  *= require_tree .
  *= require_self
  */
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+
+&:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+ }
+}
+
+header {
+    background: navy;
+    color: white;
+
+a {
+    color: white;
+    text-decoration: none;
+}
+}
+
+html, body {
+    background: #efefef;
+}
+
+main {
+.container {
+    background: white;
+}
+}
+
+.logo {
+    float: left;
+    font-weight: bold;
+}
+
+.logout {
+    float: right;
+}
+
+.errors {
+    color: maroon;
+    margin-bottom: 1em;
+}
+
+.signin-form {
+    width: 20em;
+    border: 1px solid #ccc;
+    padding: 2em;
+    margin: 2em auto;
+    background: #efefef;
+
+> div {
+      padding: .3em 0;
+  }
+
+label {
+    display: inline-block;
+    width: 6em;
+}
+
+input[type=submit] {
+    margin-left: 6.3em;
+}
+}
+
+.task-list {
+    padding: 1em;
+& + & {
+    border-top: 1px solid darkblue;
+}
+
+h1 {
+    font-size: 110%;
+}
+}
+
+
+
+.table_fields {
+    width: 75%;
+    height: 25px;
+    float: left;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #dce1e9;
+    border-bottom: 0;
+    border-spacing: 0;
+}
+
+.table_fields .table_fields_top {background: #f1f3f6;}
+
+
+.table_fields td {
+    text-align: left;
+    border-bottom: 1px solid #dce1e9;
+    border-right: 1px solid #dce1e9;
+    font-size: 16px;
+    line-height: 25px;
+    color: black;
+    white-space:nowrap;
+}
+
+.left {
+    float: right;
+    display: inline-block;
+}
+
+.clicked {
+    background: black;
+    color: white;
+}
+
+
+
+.modal {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    transition: all 500ms ease;
+}
+
+.modal.active {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0; right:0; bottom: 0: left: 0;
+    background: rgba(000,000,000, 0.5);
+    transition: all 500ms ease;
+}
+
+.task-hidden {
+    display: none;
+}
+
+.button-show {
+    display: none;
+}
+
+.flash {
+    border: 1px;
+    background-color: lightgreen;
+}
+
+.inline {
+    display: inline-block;
+    font-size: 18px;
+}
