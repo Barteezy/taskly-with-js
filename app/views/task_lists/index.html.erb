@@ -4,7 +4,7 @@
 
 <% if flash[:notice] %>
     <span class="flash"><%= flash[:notice] %></span>
-    <%end%>
+<% end %>
 
 
 <br>
@@ -12,15 +12,19 @@
   <tr class="table_fields_top">
     <% @task_lists.each do |task_list| %>
         <td class="table-row">
-         <button><</button><button class="button-show">v</button><b><%= task_list.task %></b>
+          <button><</button>
+          <button class="button-show">v</button>
+          <b><%= task_list.task %></b>
 
           <% task_list.tasks.each do |task| %>
               <p class="task-hidden"><%= task.description %></p>
-            <% end %>
-         <span class="left"> <%= link_to "+Add Task", new_task_list_task_path(task_list) %></span>
+          <% end %>
+          <span class="left">
+           <%= link_to "Edit", edit_task_list_path(task_list) %>
+            <%= link_to "+Add Task", new_task_list_task_path(task_list) %></span>
         </td>
         </tr>
-  <% end %>
+    <% end %>
     <div id="modal" class="modal">
       <button class="toggleModal">Toggle Modal!</button>
     </div>

@@ -9,7 +9,8 @@ class TasksController < ApplicationController
     p params
     @task = Task.new(description: params[:task][:description], task_list_id: params[:task_list_id])
     if @task.save
-    redirect_to root_path
+      redirect_to root_path
 
+    end
   end
 end

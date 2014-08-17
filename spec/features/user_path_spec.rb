@@ -45,6 +45,14 @@ feature "user can go to homepage" do
 
       expect(page).to have_content "work on jQuery"
 
+      click_on "Edit"
+
+      fill_in "Task", :with => "work on Javascript"
+
+      click_on "Edit Task List"
+
+      expect(page).to have_content("work on Javascript")
+
     end
 
 end
