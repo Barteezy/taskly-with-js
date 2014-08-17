@@ -1,0 +1,9 @@
+<h1><%= @task_list.task %></h1>
+
+<% @task_list.tasks.each do |task| %>
+<ul>
+    <li><%= task.description %>
+      <%= link_to "Delete", "/task_lists/#{@task_list.id}/tasks/#{task.id}", method: :delete, data: {confirm: 'Are you sure?'} %></li>
+</ul>
+
+<% end %>

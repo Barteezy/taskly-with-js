@@ -12,6 +12,10 @@ class TaskListsController < ApplicationController
     @task_list= TaskList.find(params[:id])
   end
 
+  def show
+    @task_list = TaskList.find(params[:id])
+  end
+
   def update
     @task_list = TaskList.find(params[:id])
     @task_list.update(task: params[:task_list][:task])
