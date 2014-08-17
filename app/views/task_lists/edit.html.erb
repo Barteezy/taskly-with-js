@@ -1,0 +1,17 @@
+<h1>Edit Task List</h1>
+
+<%= form_for @task_list do |f| %>
+    <% if @task_list.errors.any? %>
+        <div class="errors">
+          <p>Your task list could not be edited</p>
+        </div>
+    <%end%>
+    <div>
+      <%= f.label :task %>
+      <%= f.text_field :task %>
+    </div>
+    <div>
+      <%= f.submit "Edit Task List" %>
+    </div>
+
+<% end %>
